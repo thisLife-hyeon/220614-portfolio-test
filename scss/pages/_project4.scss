@@ -1,0 +1,121 @@
+.pro4 {
+  width: 100vw;
+  margin: 0 auto;
+
+  h6 {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  p,
+  li,
+  button,
+  span {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
+  &__top {
+    width: 100%;
+    height: 97rem;
+    background-color: #232323;
+    @include flex;
+    flex-direction: column;
+    position: relative;
+    color: $color--white;
+
+    &::before {
+      @include pseudo;
+      background-image: url(../img/web-header.png);
+      opacity: 0.4;
+      @include bgimg;
+      background-position-y: bottom;
+    }
+
+    h4 {
+      z-index: 1;
+      margin-bottom: 2rem;
+      font-size: 4.8rem;
+      font-weight: 300;
+    }
+
+    .pro4 {
+      &__imgbox {
+        z-index: 1;
+        width: 100rem;
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      &__img {
+        width: 46.8rem;
+        @include bgimg;
+        &--1 {
+          height: 66.3rem;
+          background-image: url(../img/web-design.png);
+          background-position-y: 68%;
+          box-shadow: 2px 10px 10px rgba($color: $color--black, $alpha: 0.3);
+        }
+        &--2 {
+          margin-top: 20%;
+          h5 {
+            font-size: 3.2rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+          }
+          p,
+          span {
+            display: block;
+            line-height: 3rem;
+          }
+          .pro4__btn {
+            @include button;
+            width: 16rem;
+            height: 4rem;
+            background-color: transparent;
+            color: $color--white;
+            border-color: $color--white;
+            margin-top: 4rem;
+            margin-left: 68%;
+
+            &:hover,
+            &:active {
+              background-color: rgba($color: #000000, $alpha: 0.5);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  .dot {
+    z-index: 1;
+    &--jj1 {
+      background-color: #2ac1bc;
+    }
+    &--jj2 {
+      background-color: #ffffff;
+    }
+    &--jj3 {
+      background-color: #373737;
+    }
+    &--4 {
+      background-color: #2ac1bc;
+      width: 6.4rem;
+      height: 6.4rem;
+      margin-right: 1rem;
+    }
+    &--5 {
+      background-color: #ffffff;
+      width: 6.4rem;
+      height: 6.4rem;
+      margin-right: 1rem;
+    }
+    &--6 {
+      background-color: #373737;
+      width: 6.4rem;
+      height: 6.4rem;
+      margin-right: 1rem;
+    }
+  }
+}

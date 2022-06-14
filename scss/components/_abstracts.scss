@@ -1,0 +1,51 @@
+//variables
+$color--white: #fff;
+$color--lightgray: #f7f7f7;
+$color--gray: #929292;
+$color--darkgray: #535353;
+$color--black: #000;
+$color--pink: hotpink;
+$color--lightpink: #ffdcf0;
+
+//mixin
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin bgimg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin button {
+  width: 12rem;
+  height: 3.6rem;
+  background-color: $color--white;
+  border: 1px solid #000;
+  border-radius: 2rem;
+
+  &:hover,
+  &:active {
+    // background-color: $color--lightgray;
+    background-color: rgba($color: #000, $alpha: 0.1);
+    cursor: pointer;
+  }
+}
+
+@mixin pseudo {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

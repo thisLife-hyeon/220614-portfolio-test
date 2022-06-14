@@ -1,0 +1,150 @@
+.pro3 {
+  width: 100%;
+  margin: 0 auto;
+
+  &__top {
+    width: 100%;
+    height: 100rem;
+    background-color: $color--darkgray;
+    @include flex;
+    flex-direction: column;
+    position: relative;
+    //z-index: -1;
+    color: $color--white;
+
+    &::before {
+      @include pseudo;
+      background: url(../img/sun-mockup.jpg);
+      opacity: 0.5;
+      @include bgimg;
+      //z-index: -1;
+    }
+
+    h4 {
+      z-index: 1;
+      margin-bottom: 2rem;
+    }
+
+    .pro3 {
+      &__imgbox {
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4rem;
+      }
+      &__img {
+        width: 46.8rem;
+        height: 66.3rem;
+        @include bgimg;
+
+        &--1 {
+          background-image: url(../img/sun-illust.jpg);
+        }
+        &--2 {
+          width: 46.8rem;
+          height: 26rem;
+          margin-top: 20%;
+          margin-right: 4rem;
+
+          h5 {
+            margin-bottom: 2rem;
+          }
+          p,
+          span {
+            display: block;
+            line-height: 3rem;
+          }
+          .pro3__btn {
+            @include button;
+            width: 14rem;
+            background-color: transparent;
+            color: $color--white;
+            border-color: $color--white;
+            margin-top: 2rem;
+
+            &:hover,
+            &:active {
+              background-color: rgba($color: #000000, $alpha: 0.5);
+              cursor: pointer;
+            }
+          }
+          &::after {
+            width: 100%;
+            height: 30rem;
+            @include pseudo;
+            background-color: #000;
+            opacity: 0.5;
+            top: 40%;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+  .dot {
+    z-index: 1;
+    &--sm1 {
+      background-color: #d97739;
+    }
+    &--sm2 {
+      background-color: #fa5c44;
+    }
+    &--sm3 {
+      background-color: #5267a3;
+    }
+    &--sm4 {
+      background-color: #2a2024;
+    }
+  }
+}
+.pro3 {
+  &__bottom {
+    width: 126rem;
+    height: 80rem;
+    margin: 0 auto;
+
+    h5 {
+      text-align: center;
+      margin-top: 18rem;
+      margin-bottom: 5rem;
+    }
+  }
+  &__imgcontain {
+    display: flex;
+    margin: 0 auto;
+
+    .imgcontain__list {
+      width: 30rem;
+      margin: 0 auto;
+    }
+    .imgcontain__img {
+      width: 27.6rem;
+      height: 27.6rem;
+      margin: 0 auto;
+      @include bgimg;
+
+      &--1 {
+        background-image: url(../img/sun-1.png);
+      }
+      &--2 {
+        background-image: url(../img/sun-2.png);
+      }
+      &--3 {
+        background-image: url(../img/sun-3.png);
+      }
+      &--4 {
+        background-image: url(../img/sun-4.png);
+      }
+    }
+    p,
+    span {
+      display: block;
+      text-align: center;
+      font-size: 2rem;
+    }
+    p {
+      margin-top: 3rem;
+      color: $color--darkgray;
+    }
+  }
+}

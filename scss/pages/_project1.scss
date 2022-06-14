@@ -1,0 +1,132 @@
+.pro1 {
+  width: 100vw;
+  margin: 0 auto;
+
+  h6 {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  p,
+  li,
+  button,
+  span {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
+  &__top {
+    width: 100%;
+    height: 97rem;
+    background-color: #232323;
+    @include flex;
+    flex-direction: column;
+    position: relative;
+    color: $color--white;
+
+    &::before {
+      @include pseudo;
+      // background-image: url(../img/web-header.png);
+      opacity: 0.4;
+      @include bgimg;
+      background-position-y: bottom;
+    }
+
+    h4 {
+      z-index: 1;
+      margin-bottom: 2rem;
+      font-size: 4.8rem;
+      font-weight: 300;
+    }
+
+    .pro1 {
+      &__imgbox {
+        z-index: 1;
+        width: 100rem;
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      &__img {
+        width: 46.8rem;
+        @include bgimg;
+        &--1 {
+          height: 66.3rem;
+          // background-image: url(../img/web-design.png);
+          background-position-y: 68%;
+          // box-shadow: 2px 10px 10px rgba($color: $color--black, $alpha: 0.3);
+        }
+        &--2 {
+          margin-top: 20%;
+          h5 {
+            font-size: 3.2rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+          }
+          p,
+          span {
+            display: block;
+            line-height: 3rem;
+          }
+          .pro1__btn {
+            @include button;
+            width: 16rem;
+            height: 4rem;
+            background-color: transparent;
+            color: $color--white;
+            border-color: $color--white;
+            margin-top: 4rem;
+            margin-left: 68%;
+
+            &:hover,
+            &:active {
+              background-color: rgba($color: #000000, $alpha: 0.5);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  .swiper {
+    width: 46.8rem;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: -4rem auto 0 auto;
+
+    .swiper-slide {
+      width: 27rem;
+      height: 60rem;
+      background-position: center;
+      background-size: cover;
+
+      img {
+        display: block;
+        width: 100%;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+.dots {
+  width: 14rem;
+  display: flex;
+  justify-content: space-between;
+
+  .dot {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: aqua;
+
+    &--pp1 {
+      background-color: #42164c;
+    }
+    &--pp2 {
+      background-color: #964d9a;
+    }
+    &--pp3 {
+      background-color: #f5af1b;
+    }
+  }
+}

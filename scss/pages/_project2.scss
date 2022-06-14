@@ -1,0 +1,104 @@
+.pro2 {
+  width: 100vw;
+  margin: 0 auto;
+
+  h6 {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  p,
+  li,
+  button,
+  span {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
+  &__top {
+    width: 100%;
+    height: 97rem;
+    background-color: $color--black;
+    @include flex;
+    flex-direction: column;
+    position: relative;
+    color: $color--white;
+
+    &::before {
+      @include pseudo;
+      background: url(../img/jeju-mockup.png);
+      opacity: 0.3;
+      @include bgimg;
+    }
+
+    h4 {
+      z-index: 1;
+      margin-bottom: 2rem;
+      font-size: 4.8rem;
+      font-weight: 300;
+    }
+
+    .pro2 {
+      &__imgbox {
+        z-index: 1;
+        width: 100rem;
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      &__img {
+        width: 46.8rem;
+        @include bgimg;
+        &--1 {
+          // height: 66.3rem;
+          height: 46.8rem;
+          border-radius: 20px;
+          background-image: url(../img/jeju-info.png);
+          background-position-y: top;
+          box-shadow: 2px 10px 10px rgba($color: $color--black, $alpha: 0.3);
+        }
+        &--2 {
+          margin-top: 10%;
+          h5 {
+            font-size: 3.2rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+          }
+          p,
+          span {
+            display: block;
+            line-height: 3rem;
+          }
+          .pro2__btn {
+            @include button;
+            width: 16rem;
+            height: 4rem;
+            background-color: transparent;
+            color: $color--white;
+            border-color: $color--white;
+            margin-top: 4rem;
+            // margin-left: 68%;
+
+            &:hover,
+            &:active {
+              background-color: rgba($color: #000000, $alpha: 0.5);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  .dot {
+    z-index: 1;
+    &--jj1 {
+      background-color: #214f26;
+    }
+    &--jj2 {
+      background-color: #a6ce39;
+    }
+    &--jj3 {
+      background-color: #9fdae6;
+    }
+  }
+}

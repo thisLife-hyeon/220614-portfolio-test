@@ -1,0 +1,208 @@
+.gnb {
+  width: 100vw;
+  height: 7rem;
+  // background-color: $color--white;
+  background-color: rgba($color: #fff, $alpha: 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  box-shadow: rgba($color: #000000, $alpha: 0.3) 0px 1px 10px;
+
+  h5 {
+    font-size: 3.2rem;
+    font-weight: 500;
+  }
+
+  &__right,
+  h5 {
+    margin: 0 4rem;
+  }
+
+  h5 {
+    letter-spacing: -0.1rem;
+    cursor: pointer;
+    color: $color--pink;
+  }
+
+  &__right {
+    width: 80rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    li,
+    button {
+      font-size: 2.2rem;
+      cursor: pointer;
+      font-weight: normal;
+    }
+
+    li:hover {
+      color: $color--pink;
+    }
+
+    button {
+      @include button;
+      border-color: $color--pink;
+      color: $color--pink;
+      background-color: rgba($color: #fff, $alpha: 0.3);
+    }
+  }
+}
+
+.wrapper {
+  margin-top: 7rem;
+}
+
+.header {
+  width: 100vw;
+  height: 80rem;
+  background-color: #fff4e9;
+  // background-color: aquamarine;
+  // @include bgimg;
+  // background-size: contain;
+
+  // margin-top: 14rem;
+
+  //피드백
+  //배경 밑부분 약간 자르기.
+  //밑 콘텐츠 약간 더 보이게(사용자 유출방지)
+
+  #myimg {
+    width: 100vw;
+    margin-top: 16rem;
+    position: absolute;
+  }
+
+  &__txt {
+    position: relative;
+    top: 30%;
+    left: 10%;
+    // width: 130rem;
+    // height: 92rem;
+    // margin: 0 auto;
+    h1 {
+      font-size: 12rem;
+      font-weight: 700;
+    }
+    p {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.profile {
+  width: 130rem;
+  height: 92rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__img {
+    width: 39rem;
+    height: 50rem;
+    background-image: url(../img/profile.png);
+    @include bgimg;
+    background-color: rgb(241, 137, 160);
+
+    &::after {
+      content: "";
+      width: 84%;
+      height: 90%;
+      display: inline-block;
+      position: relative;
+      top: -12rem;
+      left: -12rem;
+      z-index: -1;
+      background-color: $color--lightpink;
+    }
+  }
+
+  &__txt {
+    width: 76rem;
+    height: 50rem;
+
+    h3 {
+      font-size: 8rem;
+      font-weight: 700;
+      margin-top: -1.4rem;
+      margin-bottom: 4rem;
+    }
+    p {
+      font-size: 1.6rem;
+      font-weight: 300;
+    }
+  }
+}
+
+.skills__boxs {
+  width: 76rem;
+  height: 6rem;
+  display: flex;
+
+  li {
+    width: 25rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    margin-left: -1.8rem;
+
+    span {
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: $color--darkgray;
+    }
+  }
+
+  .skills__box {
+    width: 4.4rem;
+    height: 4.4rem;
+    @include bgimg;
+    margin-right: 2rem;
+  }
+
+  .skill-- {
+    &1 {
+      background-image: url(../img/skill1.png);
+    }
+    &2 {
+      background-image: url(../img/skill2.png);
+    }
+    &3 {
+      background-image: url(../img/skill3.png);
+    }
+    &4 {
+      background-image: url(../img/skill4.png);
+    }
+    &5 {
+      background-image: url(../img/skill5.png);
+    }
+    &6 {
+      background-image: url(../img/skill6.png);
+    }
+  }
+}
+
+.profile__bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  line-height: 2.8rem;
+  margin-top: 4rem;
+
+  h6 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: $color--gray;
+    margin-bottom: 1.8rem;
+  }
+  ul {
+    padding: 0;
+  }
+}

@@ -1,0 +1,49 @@
+.footer {
+  width: 100vw;
+  height: 32rem;
+  background-color: $color--darkgray;
+  @include flex;
+  margin: 0 auto;
+  color: $color--lightpink;
+  line-height: 1.5;
+
+  &__left {
+    margin-right: 12rem;
+
+    h5 {
+      font-size: 3.2rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  &__right {
+    font-size: 1.2rem;
+  }
+}
+
+.arrow-up {
+  position: fixed;
+  bottom: 6rem;
+  right: 5rem;
+  width: 7rem;
+  height: 7rem;
+  color: white;
+  background-color: $color--pink;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  span {
+    font-size: 5rem;
+  }
+
+  &.show {
+    opacity: 0.8;
+  }
+}
